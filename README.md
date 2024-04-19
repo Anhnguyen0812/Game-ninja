@@ -1,8 +1,8 @@
-**Họ và tên : Nguyễn Phi Anh & Hoàng Quốc Bảo
+**Họ và tên: Nguyễn Phi Anh & Hoàng Quốc Bảo**
 
-MSSV : 23020009 & 23020012
+MSSV: 23020009 & 23020012
 
-K68 C-D, Trường đại học Công Nghệ, Đại học Quốc Gia Hà Nội**
+K68 C-D, Trường đại học Công Nghệ, Đại học Quốc Gia Hà Nội
 
 **Ninja game**
 
