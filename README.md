@@ -78,3 +78,7 @@ Con trỏ
 AI enemy, tracking bot
 
 _**Tự đánh giá :** Em hi vọng sản phẩm của bọn em sẽ nhận được sự ghi nhận của thầy và nhận được điểm 8.5 từ thầy_
+
+Video demo chơi game
+
+https://drive.google.com/file/d/1rQdeVuMDmJ2I4N5YbvA5qz51P4RUNTfT/view?usp=sharing
