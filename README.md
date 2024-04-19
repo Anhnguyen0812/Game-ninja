@@ -10,7 +10,7 @@ K68 C-D, Trường đại học Công Nghệ, Đại học Quốc Gia Hà Nội
 Trong một thế giới phong phú và đầy màu sắc, tồn tại một môn phái ninja, nhưng để được tu luyện sức mạnh và nâng cao kỹ năng thực chiến nên đã được môn phái giao cho nhiệm vụ.
 Sứ mệnh
 Một nhóm ninja được giao nhiệm vụ đi vào khu rừng để tiêu diệt các quái vật và đi tìm bí kíp võ công. Người chơi sẽ kiểm soát một trong các ninja này, mỗi người có kỹ năng và vũ khí riêng.
- -kỹ năng : phóng suriken, nhảy , nhảy lộn né tránh.
+ -kỹ năng : phóng shuriken, nhảy , nhảy lộn né tránh.
 Hành trình qua rừng
 Ninja phải vượt qua những cạm bẫy, thử thách và quái vật để tiến sâu vào khu rừng. Họ sẽ đối mặt với các quái vật từ những con quái vật đá khổng lồ dị dạng đến những vật hiện đại. Vì khu rừng đầy bí ẩn và khắc nghiệt nên sét có thể xuất hiện bất ngờ và tảng đá cũng có thể là giả, nên phải cẩn thận khi di chuyển, phía dưới là dòng dung nham nóng chảy. Cuối cùng có thể sẽ phải đối mặt với con boss khổng lồ với sức mạnh vô địch. Đòi hỏi người chơi cần có kỹ năng chơi game điêu luyện và khéo léo sử dụng kỹ năng ninja cùng với một chút sự may mắn.
 Kết thúc
@@ -45,7 +45,17 @@ Game có nhiều bẫy không tưởng.
 **Đồ hoạ:**
 Game sử dụng nhiều animations sống động, âm thanh vui vẻ được lấy từ nhiều nguồn trên Google
 
+Start game
+
 ![image](https://github.com/Anhnguyen0812/Game-ninja/assets/144301766/cc0e9f9c-bbca-4f65-9cb6-54e2edbc6c6d)
+
+Pause game
+
+![image](https://github.com/Anhnguyen0812/Game-ninja/assets/144301766/8ff47341-8052-41ec-a621-49d15ceef14c)
+
+Cuối màn game
+
+![image](https://github.com/Anhnguyen0812/Game-ninja/assets/144301766/80857e9a-1cb4-449a-b767-4dc44f3d2598)
 
 **Các kỹ thuật lập trình:**
 
