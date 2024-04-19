@@ -73,8 +73,8 @@ void BulletObject::LoadImgBullet(SDL_Renderer* des) {
 	if (bullet_type == LASER_BULLET)
 	{
 		LoadImg("img//laser_bullet.png", des);
-		width_bullet = 30;
-		height_bullet = 30;
+		width_bullet = 20;
+		height_bullet = 20;
 	} 
 	else
 	{

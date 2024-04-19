@@ -68,6 +68,11 @@ void Savegame::savethreat(std::vector<ThreatsObject*> list_threats)
 	}
 }
 
+void Savegame::save_time(const Uint32& val_time, const Uint32& last_time)
+{
+	fo << val_time << " " << last_time;
+}
+
 void Savegame::get(Map& map_data, Map& map_data2, MainObject& p_player)
 {
 	fi >> map_data.start_x_ >> map_data.start_y_;
@@ -169,8 +174,7 @@ void Savegame::get_level(int& level)
 	level_ = level;
 }
 
-
-
-
-
-
+void Savegame::get_time(Uint32& val_time, Uint32& last_time)
+{
+	fi >> val_time >> last_time;
+}

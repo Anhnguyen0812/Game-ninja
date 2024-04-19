@@ -544,7 +544,7 @@ void MainObject::CheckToMap(Map& map_data, Map& map_data2)
 
 	x1 = (x_pos_ + x_val_ + 10) / TILE_SIZE;
 	x2 = (x_pos_ + x_val_ + width_frame_ - 11) / TILE_SIZE;
-	y1 = (y_pos_  + 1) / TILE_SIZE;
+	y1 = (y_pos_ + 1) / TILE_SIZE;
 	y2 = (y_pos_ + height_min - 1) / TILE_SIZE;
 
 	int v1 = map_data2.tile[y1][x1];
@@ -569,16 +569,16 @@ void MainObject::CheckToMap(Map& map_data, Map& map_data2)
 	}
 
 	if (x1 == 9 && map_data.tile[6][11] != 0) {
-		for(int j = 10; j <= 13; j++){
-		for (int i = 5; i > 0; i--) {
-			map_data.tile[6][j + i ] = map_data.tile[6][j+i-1];
-		}
+		for (int j = 10; j <= 13; j++) {
+			for (int i = 5; i > 0; i--) {
+				map_data.tile[6][j + i] = map_data.tile[6][j + i - 1];
+			}
 
-		map_data.tile[6][j] = 0;
+			map_data.tile[6][j] = 0;
+		}
 	}
-	}
-	
-	if (x2 % 20 == 0 && x2 >= 30) {
+
+	if (x2 == 40 || x2 == 52 || x2 == 90  || x2 == 106 || x2 == 165) {
 		for (int i = x2; i <= x2 + 3; i++) {
 			for (int j = 5; j < 10; j++) {
 				map_data.tile[j][i] = 0;

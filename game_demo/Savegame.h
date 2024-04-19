@@ -26,6 +26,8 @@ public:
 	void get_threats(std::vector<ThreatsObject*>& list_threats, SDL_Renderer* g_screen);
 	void get_level(int& level);
 	void close(){fi.close(),fo.close();}
+	void save_time(const Uint32& val_time, const Uint32& last_time);
+	void get_time(Uint32& val_time, Uint32& last_time);
 
 private:
 	std::ofstream fo;

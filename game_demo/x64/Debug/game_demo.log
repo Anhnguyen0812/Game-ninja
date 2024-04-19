@@ -1,19 +1,2 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (game_demo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Main.cpp
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\CommonFunction.h(56,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\CommonFunction.h(69,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\MainObject.h(44,29): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\MainObject.h(45,34): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\MainObject.h(46,42): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\MainObject.h(47,42): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\BossObject.h(24,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\BossObject.h(25,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(142,37): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(146,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(147,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(168,40): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(795,74): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(907,17): warning C4551: function call missing argument list
-C:\Users\NP.ANH\Desktop\ninja_game\game_demo\Main.cpp(98): warning C4715: 'InitData': not all control paths return a value
-  LINK : program database C:\Users\NP.ANH\Desktop\ninja_game\x64\Debug\game_ninja.pdb missing; performing full link
   game_demo.vcxproj -> C:\Users\NP.ANH\Desktop\ninja_game\x64\Debug\game_ninja.exe

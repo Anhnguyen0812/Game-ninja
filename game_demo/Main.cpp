@@ -157,7 +157,7 @@ std::vector<ThreatsObject*> makethreatslist(const int& level)
 
     ThreatsObject* threats_ob = new ThreatsObject[20];
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 10; i++)
     {
         ThreatsObject* p_threat = &threats_ob[i];
 
@@ -165,7 +165,7 @@ std::vector<ThreatsObject*> makethreatslist(const int& level)
         {
             p_threat->LoadImg("img//threat_level1.png", g_screen);
 
-            p_threat->set_x_pos(i*1100 + 1000);
+            p_threat->set_x_pos(i*1100 + 900);
             p_threat->set_y_pos(250);
             p_threat->set_type_move(ThreatsObject::STATIC_THREAT);
             p_threat->set_input_left(0);
@@ -462,6 +462,8 @@ int main(int argc, char* argv[])
                     p_player.SetMapXY(map_data.start_x_, map_data.start_y_);
                     threats_list.erase(threats_list.begin(), threats_list.end());
                     save1.get_threats(threats_list, g_screen);
+                    save1.get_time(val_time, last_time);
+                    last_time = SDL_GetTicks()/1000 - (200 - val_time);
                     save1.close();
 
                     start = false;
@@ -510,7 +512,7 @@ int main(int argc, char* argv[])
 
         if (p_player.get_isnewlevel())
         {
-            last_time = SDL_GetTicks();
+            last_time = SDL_GetTicks() / 1000;
             game_map.LoadMap("map//map01.txt");
             game_map1.LoadMap("map//map02.txt");
             game_map2.LoadMap("map//map03.txt");
@@ -605,6 +607,7 @@ int main(int argc, char* argv[])
                         save.savemap(map_data, map_data2);
                         save.saveplayer(p_player);
                         save.savethreat(threats_list);
+                        save.save_time(val_time, last_time);
                         save.close();
                         is_pause = false;
                         SDL_Delay(500);
@@ -746,7 +749,7 @@ int main(int argc, char* argv[])
         
         std::string str_time = "Time: ";
         Uint32 time_val = SDL_GetTicks() / 1000 - last_time;
-        val_time = 300 - time_val;
+        val_time = 200 - time_val;
         score.SetText(str_time + std::to_string(val_time));
         score.LoadFromRenderText(font_score, g_screen);
         score.RenderText(g_screen, 1280 - 200, 20);
@@ -776,9 +779,6 @@ int main(int argc, char* argv[])
                 }
             }
         }
-        
-
-        
 
         for (int i = 0; i < threats_list.size(); i++)
         {
@@ -801,6 +801,9 @@ int main(int argc, char* argv[])
                     p_threat->return_player_val(p_player.return_xval());
                 }
                 p_threat->GetPlayerRect(player);
+                if (val_time % 2 == 0) {
+                
+                }
                 p_threat->makeBullet(g_screen, SCREEN_WIDTH, SCREEN_HEIGHT);
                 p_threat->Show(g_screen);
                 if (p_threat->get_blood() > 0) {
@@ -896,7 +899,7 @@ int main(int argc, char* argv[])
             SDL_Delay(1000);
             continue;
         }
-        if (p_player.get_lift() <= 0) {
+        if (p_player.get_lift() <= 0 || val_time <= 0) {
             Mix_PlayChannel(-1, death_sound, 0);
             SDL_ShowCursor(true);
             
