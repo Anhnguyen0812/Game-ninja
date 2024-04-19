@@ -53,7 +53,7 @@ Thư viện SDL2(SDL Image, SDL ttf, SDL mixer)
 
 Lập trình hướng đối tượng
 
-Xuất nhập file, đọc tệp bằng thư viện "dirent.h"
+Xuất nhập file, đọc thư mục bằng thư viện "dirent.h"
 
 Vòng for, while
 
@@ -65,6 +65,6 @@ Vector
 
 Con trỏ
 
-AI enemy
+AI enemy, tracking bot
 
 _**Tự đánh giá :** Em hi vọng sản phẩm của bọn em sẽ nhận được sự ghi nhận của thầy và nhận được điểm 8.5 từ thầy_
