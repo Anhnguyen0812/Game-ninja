@@ -127,7 +127,7 @@ void Savegame::get_threats(std::vector<ThreatsObject*>& list_threats, SDL_Render
 			p_threat->set_x_pos(xpos);
 			p_threat->set_y_pos(ypos);
 			p_threat->set_blood(blood);
-			p_threat->set_maxblood(1);
+			p_threat->set_maxblood(level_ * 2);
 			p_threat->get_val(10 + level_ * 2);
 			int pos1 = p_threat->get_x_pos() - 60;
 			int pos2 = p_threat->get_x_pos() + 60;

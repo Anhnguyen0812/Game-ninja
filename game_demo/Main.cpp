@@ -128,8 +128,8 @@ std::vector<ThreatsObject*> makethreatslist(const int& level)
 {
     std::vector<ThreatsObject*> list_threats;
 
-    ThreatsObject* dynamioc_threats = new ThreatsObject[10];
-    for (int i = 0; i < 10; i++)
+    ThreatsObject* dynamioc_threats = new ThreatsObject[15];
+    for (int i = 0; i < 15; i++)
     {
         ThreatsObject* p_threat = (dynamioc_threats + i);
         if (p_threat != NULL)
@@ -139,7 +139,7 @@ std::vector<ThreatsObject*> makethreatslist(const int& level)
 
             p_threat->set_type_move(ThreatsObject::MOVE_IN_SPACE_THREAT);
 
-            p_threat->set_x_pos(500 + i * 1000);
+            p_threat->set_x_pos(400 + i * 800);
             p_threat->set_y_pos(200);
             p_threat->get_val(10 + level * 2);
 
@@ -147,8 +147,8 @@ std::vector<ThreatsObject*> makethreatslist(const int& level)
             int pos2 = p_threat->get_x_pos() + 60;
             p_threat->set_animationpos(pos1, pos2);
             p_threat->set_clips();
-            p_threat->set_blood(1);
-            p_threat->set_maxblood(1);
+            p_threat->set_blood(level * 2);
+            p_threat->set_maxblood(level * 2);
             p_threat->set_level(level);
             p_threat->set_threatval(level*2 + 1);
             list_threats.push_back(p_threat); 
@@ -248,6 +248,10 @@ int main(int argc, char* argv[])
     if (!throw_shuriken) {
         std::cout << "sound error: " << Mix_GetError();
     }
+    Mix_Chunk* hitted = Mix_LoadWAV("sound//hitted.wav");
+    if (!hitted) {
+        std::cout << "sound error: " << Mix_GetError();
+    }
     Mix_Chunk* jump = Mix_LoadWAV("sound//jump_sound.mp3");
     if (!jump) {
         std::cout << "sound error: " << Mix_GetError();
@@ -329,6 +333,7 @@ int main(int argc, char* argv[])
     start_button[1].SetColor(TextObject::RED_TEXT);
     start_button[2].SetColor(TextObject::RED_TEXT);
     start_button[0].SetText("Start");
+    start_button[1].SetText("Load");
     start_button[1].SetText("Load");
     start_button[2].SetText("Quit");
 
@@ -846,7 +851,7 @@ int main(int argc, char* argv[])
                                 // show blood
                                 int x_pos = p_player.GetRect().x;
                                 int y_pos = p_player.GetRect().y;
-
+                                Mix_PlayChannel(-1, hitted, 0);
                                 blood_pl.set_frame(ex);
                                 blood_pl.SetRect(x_pos, y_pos);
                                 blood_pl.Show(g_screen);
@@ -1007,12 +1012,15 @@ int main(int argc, char* argv[])
                 SDL_RenderPresent(g_screen);
                 SDL_Delay(5);
             }
+            p_player.set_blood(p_player.get_blood() - 1);
             p_player.set_ypos(280);
             p_player.set_yval(0);
             p_player.set_xpos(p_player.get_xpos() - 64 * 2);
+
             Mix_PlayChannel(-1, death_sound, 0);
 
             SDL_Delay(1000);
+        
         }
 
         int x, y;

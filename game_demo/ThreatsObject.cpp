@@ -336,7 +336,7 @@ void ThreatsObject::InitBullet(BulletObject* p_bullet, SDL_Renderer* screen)
 		p_bullet->LoadImgBullet(screen);
 		p_bullet->set_is_move(true);
 
-		float angle = atan2(player_Rect.y - rect_.y, player_Rect.x - rect_.x);
+		float angle = atan2(player_Rect.y - rect_.y + 20, player_Rect.x - rect_.x);
 
 		int dx = static_cast<int>(cos(angle) * val); // Vận tốc của viên đạn
 		int dy = static_cast<int>(sin(angle) * val);
@@ -381,7 +381,13 @@ void ThreatsObject::makeBullet(SDL_Renderer* screen, const int& x_limit, const i
 			else
 			{
 				p_bullet->return_player_val(player_x_val);
-				float angle = atan2(player_Rect.y  - rect_.y  , player_Rect.x - rect_.x );
+				float angle;
+				if (player_Rect.x > rect_.x) {
+					angle = atan2(player_Rect.y - rect_.y + 30, player_Rect.x - rect_.x);
+				}
+				else {
+					angle = atan2(player_Rect.y - rect_.y + 30, player_Rect.x - rect_.x + 20);
+				}
 					int dx = static_cast<int>(cos(angle) * val); // Vận tốc của viên đạn
 					int dy = static_cast<int>(sin(angle) * val);
 					//set duoc phep ban
