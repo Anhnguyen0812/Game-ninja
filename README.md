@@ -63,7 +63,7 @@ Thư viện SDL2(SDL Image, SDL ttf, SDL mixer)
 
 Lập trình hướng đối tượng
 
-Xuất nhập file, đọc thư mục bằng thư viện "dirent.h"
+Xuất nhập file, đọc thư mục bằng thư viện "dirent.h", lưu trạng thái map, hight level
 
 Vòng for, while
 
